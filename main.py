@@ -15,3 +15,7 @@ def get_users():
 def create_post(payload: dict = Body()):
     print(payload)
     return {"new_post": f"title: {payload['title']} content: {payload['content']}"}
+
+@app.delete("/deleteuser")
+def delete_user():
+    return {"message": "User deleted"}
