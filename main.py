@@ -19,3 +19,11 @@ def create_post(payload: dict = Body()):
 @app.delete("/deleteuser")
 def delete_user():
     return {"message": "User deleted"}
+
+app.head("/headapi")
+def head_api():
+    return {"message": "head api"}
+
+app.put("/putapi")
+def put_api():
+    return {"message": "put api"}
