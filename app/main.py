@@ -32,6 +32,12 @@ def find_index_of_post(id):
             return i
 
 # CRUD Operations for Posts
+
+# initial Path
+@app.get("/")
+def home():
+    return{"message": "Welcome to FASTAPI"}
+
 # Get all posts
 @app.get("/posts")
 def get_posts():
