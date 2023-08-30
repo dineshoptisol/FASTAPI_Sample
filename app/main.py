@@ -57,10 +57,10 @@ def get_posts(id: int):
 # Post a single posts
 @app.post("/createpost", status_code= status.HTTP_201_CREATED)
 def create_post(post: Post):
-   post_dict = post.model_dump()
-   post_dict['id'] = randrange(0,100)
-   my_posts.append(post_dict)
-   return {"data": post_dict}
+    post_dict = post.model_dump()
+    post_dict['id'] = randrange(0,100)
+    my_posts.append(post_dict)
+    return {"data": post_dict}
 
 
 # Update a post
